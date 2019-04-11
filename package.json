@@ -1,0 +1,37 @@
+{
+  "name": "smcfio",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofiacf/smcfio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/sofiacf/smcfio/issues"
+  },
+  "homepage": "https://github.com/sofiacf/smcfio#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-scripts": "2.1.8"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
