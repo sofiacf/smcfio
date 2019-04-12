@@ -1,0 +1,10 @@
+body {
+  font: 14px "Cutive Mono", monospace;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.Art {
+  position: absolute;
+  z-index: -99;
+}

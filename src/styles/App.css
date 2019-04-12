@@ -1,0 +1,14 @@
+a {
+  color: #111;
+  text-decoration: none;
+}
+h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+.navbar {
+  border-style: double none;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}

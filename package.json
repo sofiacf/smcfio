@@ -17,12 +17,13 @@
   "bugs": {
     "url": "https://github.com/sofiacf/smcfio/issues"
   },
-  "homepage": "https://github.com/sofiacf/smcfio#readme",
+  "homepage": ".",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },
   "eslintConfig": {

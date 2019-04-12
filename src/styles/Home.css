@@ -1,0 +1,17 @@
+.welcome {
+  margin-top: 25px;
+  width: 100%;
+}
+.welcome p {
+  width: 40%;
+}
+@media only screen and (max-width: 600px) {
+  .about {
+    float: left;
+  }
+  .specialties {
+    position: absolute;
+    right: 0;
+    width: 42%;
+  }
+}
