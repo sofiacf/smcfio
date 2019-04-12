@@ -1,15 +1,12 @@
-.workdates {
+.dates {
   color: gray;
   font: 12px "Raleway", light;
   position: static;
   z-index: 1;
 }
-.Work {
+.Experience {
   position: absolute;
 }
 .highlights {
   margin-top: 0;
-}
-.Art {
-  position: absolute;
 }
