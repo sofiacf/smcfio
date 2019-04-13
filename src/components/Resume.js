@@ -42,7 +42,7 @@ class Resume extends Component {
           "Organized courier delivery procedures, reducing errors and cost",
           "Right fielder in KH Softballs's undefeated 2018 season"
         ]} />
-        <Experience company="Right Coast Courier" position=" - Manager, Downtown Quality Control; courier" dates="FEBRUARY 2016 - JULY 2017"
+        <Experience company="Right Coast Courier" position=" - Manager, Downtown Quality Control; courier" dates="JUNE 2015 - JULY 2017"
         highlights={[
           "Provided specialty dedicated delivery service for downtown zone catering and evening orders",
           "Communicated with clients and team to optimize workflow and negotiate points of contention",
