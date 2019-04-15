@@ -1,0 +1,85 @@
+<!-- If you want to plot markers on a map using your own location data, you can use a batch geocoding service to convert addresses into latitudes and longitudes for your markers. -->
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136316886-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-136316886-1');
+    </script>
+		<title>Map</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="usamap.css">
+	</head>
+	<body>
+    <form id="quote-form" class="control-panel">
+      <div><b>Generate quote</b></div>
+      <div>
+       <span>P: <input id="p-input" class="controls" type="text" placeholder="Pickup zip"></span>
+        <span>D: <input id="d-input" class="controls" type="text" placeholder="Delivery zip"></span>
+      </div>
+      <div id="job-type-selector">
+        <span>
+          <input type="radio" name="type" id="setjobtype-direct" checked="checked">
+          <label for="setjobtype-direct">Direct</label>
+        </span>
+        <span>
+          <input type="radio" name="type" id="setjobtype-hold">
+          <label for="setjobtype-hold">Hold</label>
+        </span>
+        <span>
+          <input type="radio" name="type" id="setjobtype-rt">
+          <label for="setjobtype-rt">Roundtrip</label>
+        </span>
+      </div>
+    </form>
+    <div id="map"></div>
+    <div id="dispatch-panel" class="control-panel">
+      <div>
+        <b>Base mileage: </b><span id="mileage"></span>
+      </div>
+      <div>
+        <b>Base quote: </b><span id="quote"></span>
+      </div>
+      <div>
+        <b>Courier: </b><span id="courier">Click map to add</span>
+      </div>
+      <div>
+        <b>Courier phone: </b><span id="ph"></span>
+      </div>
+      <div>
+        <b>$3/mi quote: </b><span id = "higher-quote"></span>
+      </div>
+      <form>
+        <div>
+          <b>Rate: </b>
+          <span>
+            <select id="rate" name="dispatch">
+              <option value="45">Default</option>
+              <option value="95">PS</option>
+              <option value="110">Hazmat</option>
+            </select>
+          </span>
+        </div>
+        <div>
+          <b>Add charges: </b>
+          <span>
+            <select id="add" name="dispatch">
+              <option value="0">None</option>
+              <option value="25">Weeknight</option>
+              <option value="45">Weekend</option>
+              <option value="45">Van</option>
+            </select>
+          </span>
+        </div>
+      </form>
+    </div>
+    <script src ="scripts/usamap.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=GETYOUROWN&libraries=places&callback=initMap" type="text/javascript"></script>
+	</body>
+</html>

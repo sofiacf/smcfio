@@ -1,0 +1,59 @@
+#map {
+	height: 100%;
+}
+.dispatchPanel {
+  display: none;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.controls {
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+.control-panel {
+	box-sizing: border-box;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 0;
+	padding: 0;
+	padding-left: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 225px;
+}
+.control-panel div {
+	width: calc(100%-5px);
+	margin: 0 5px 5px 5px;
+	text-align: justify;
+}
+.control-panel div span {
+	display: inline-block;
+}
+#dispatch-panel span {
+	float: right;
+}
+#p-input,
+#d-input {
+	margin: 0 5px 0 5px;
+	width: 75px;
+}
+#origin-input:focus,
+#destination-input:focus {
+ 	border-color: #4d90fe;
+}
+#job-type-selector input {
+	margin-left: 0;
+}

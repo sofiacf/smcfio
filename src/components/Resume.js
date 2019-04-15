@@ -33,7 +33,7 @@ class Resume extends Component {
         highlights={[
           "Developed quote generation and subcontractor assignment program for national courier network with Maps JavaScript API",
           "Optimized reliability and cost to fulfill emergency deliveries in medical, financial and retail sectors",
-          "Experienceed with subcontractors across the US to arrange sensitive same-day deliveries"
+          "Coordinate with team, clients, customers, and subcontractors across the US to arrange sensitive same-day deliveries"
         ]} />
         <Experience company="Klein Hornig LLP" position=" - Accounting clerk; legal assistant" dates="JULY 2017 - DECEMBER 2018"
         highlights={[
