@@ -1,14 +1,18 @@
-a {
-  color: #111;
-  text-decoration: none;
-}
 h1 {
   font-size: 34px;
   margin-bottom: 8px;
+}
+h1 a {
+  color: inherit;
+  text-decoration: inherit;  
 }
 .navbar {
   border-style: double none;
   table-layout: fixed;
   text-align: center;
   width: 100%;
+}
+.navbar a {
+  color: inherit;
+  text-decoration: inherit;
 }

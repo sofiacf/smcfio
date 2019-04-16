@@ -1,0 +1,6 @@
+span {
+  color: gray;
+  font: 12px "Raleway", light;
+  position: static;
+  z-index: 1;
+}
