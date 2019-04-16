@@ -4,3 +4,8 @@ span {
   position: static;
   z-index: 1;
 }
+img {
+  float: right;
+  height: 30%;
+  width: 30%;
+}
