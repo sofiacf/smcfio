@@ -5,7 +5,17 @@ span {
   z-index: 1;
 }
 img {
-  float: right;
-  height: 30%;
-  width: 30%;
+  size: auto;
+}
+.Description {
+  width: 50%;
+}
+.Image {
+  width: 40%;
+}
+.Project {
+  width: 100%;
+}
+table {
+  width: 100%;
 }
