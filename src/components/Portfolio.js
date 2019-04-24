@@ -5,13 +5,14 @@ import addon from '../images/addon.png';
 class Project extends Component {
   render() {
     return (
-      <tr className="Project">
-      <td className="Description">
-      <h3><a href={this.props.url}>{this.props.name}</a></h3>
-        {this.props.technologies}
-        <p>{this.props.description}</p>
+      <tr>
+      <td style={{width: '65%'}}>
+        <h3><a href={this.props.url}>{this.props.name}</a></h3>
+        <p>{this.props.technologies}</p>
+        <div>{this.props.description}</div>
+        <br />
       </td>
-      <td className="Image">
+      <td>
         <img src={this.props.image} alt={this.props.alt} />
       </td>
       </tr>
@@ -22,12 +23,12 @@ class Project extends Component {
 class Portfolio extends Component {
   render() {
     return (
-      <div className="Portfolio">
+      <div>
       <h1>Portfolio</h1>
-      <table>
+      <table><tbody>
       <Project name="Courier Map" image={map} url="https://smcf.nfshost.com/map/" alt="courier map" technologies="JavaScript, Google Maps JavaScript API, MariaDB, PHP, HTML/CSS" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
       <Project name="Accounting Add-on" image={addon} alt="sheets add-on" url="https://github.com/sofiacf/osc-billing" technologies="Google Apps Script" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
-      </table>
+      </tbody></table>
       </div>
     );
   }

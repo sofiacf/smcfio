@@ -11,7 +11,6 @@ import Resume from './Resume';
 import Portfolio from './Portfolio';
 import Misc from './Misc';
 import Contact from './Contact';
-import Container from './Container';
 
 class App extends Component {
   render () {
@@ -20,22 +19,18 @@ class App extends Component {
       <Art />
       <Router>
         <h1><Link to="/">smcf.io</Link></h1>
-        <table className="navbar">
-          <tbody>
-            <tr>
+        <table className="navbar"><tbody><tr>
               <td><Link to="/resume">resume</Link></td>
               <td><Link to="/portfolio">portfolio</Link></td>
               <td><Link to="/misc">misc.</Link></td>
               <td><Link to="/contact">contact</Link></td>
-            </tr>
-          </tbody>
-        </table>
+        </tr></tbody></table>
+
         <Route exact path="/" component={Home} />
         <Route path="/resume" component={Resume} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/misc" component={Misc} />
         <Route path="/contact" component={Contact} />
-        <Route path="/map" component={Container} />
       </Router>
       </div>
     )
