@@ -11,6 +11,7 @@ import Resume from './Resume';
 import Portfolio from './Portfolio';
 import Misc from './Misc';
 import Contact from './Contact';
+import Container from './Container';
 
 class App extends Component {
   render () {
@@ -34,6 +35,7 @@ class App extends Component {
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/misc" component={Misc} />
         <Route path="/contact" component={Contact} />
+        <Route path="/map" component={Container} />
       </Router>
       </div>
     )
