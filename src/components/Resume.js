@@ -22,59 +22,80 @@ class Resume extends Component {
         <h1>Resume</h1>
         <h2>Sofia Chandler-Freed</h2>
         <table>
+        <tbody>
         <tr>
-          <td>Pragmatic and personable jr. developer, passionate about efficiency and driven by results.</td>
+          <td>Energetic, adaptable software engineer dedicated to building solutions that matter.</td>
         </tr>
         <tr>
+        <td>
+          <br />
           <h3>Skills</h3>
-          <ul>
-            <li>JavaScript, HTML/CSS, TypeScript, Google Apps Script</li>
-            <li>React, AWS, Python</li>
-            <li>PHP, MariaDB, Arduino</li>
+          <ul style={{float: 'left'}}>
+            <li>JavaScript, HTML/CSS, React</li>
+            <li>TypeScript, PHP, MySQL</li>
           </ul>
+          <ul style={{float: 'left'}}>
+            <li>Aurora, MariaDB, LAMP</li>
+            <li>AWS, Python, Git, Arduino</li>
+            </ul>
+        </td>
         </tr>
         <tr>
+        <td>
           <h3>Programming Experience</h3>
-          <Experience company="1 Shot Couriers" position=" - Google Apps Script, TypeScript developer" dates="DECEMBER 2018 - PRESENT"
+          <Experience company="1 Shot Couriers" position=" - JavaScript, Google Apps Script developer" dates="NOVEMBER 2018 - PRESENT"
           highlights={[
-            "Created Google Sheets Add-on to automate accounting tasks for small business",
-            "Saved independent courier company hundreds of labor hours annually by building GUI and user-friendly automations to handle billing, payroll, and other functions TBD"
+            "Built Google Apps Script Add-on to handle small business accounting tasks",
+            "Saved company hundreds of labor hours by automating billing and payroll"
           ]}/>
           <Experience company="USA Couriers" position=" - Dispatcher; web developer" dates="DECEMBER 2018 - MARCH 2019"
           highlights={[
-            "Developed quote generator and subcontractor dispatch tool for national courier network",
-            "Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions",
+            "Created quote generator and visual dispatch tool for national courier network",
+            "Harnessed decades of data to standardize and optimize dispatch decisions",
           ]} />
-          <Experience company="Klein Hornig LLP" position=" - Accounting clerk; legal assistant" dates="JULY 2017 - DECEMBER 2018"
+          <Experience company="Symbol Flux GmbH" position=" - Co-founder; JavaScript, Python developer" dates="OCTOBER 2014 - FEBRUARY 2015"
           highlights={[
-            "Designed SOPs and macros to streamline card reconciliations, produce reports, and process AP/AR, employee expenses, and reporting with Concur, Juris, and FileSite",
-            "Navigated transition to Concur software, producing user-friendly integration tools and procedures; developed training materials and provided education and technical support"
+            "Contributed to initial founding of innovative developer tools start-up",
+            "Navigated start-up process in Germany, various project contributions"
           ]} />
+        </td>
         </tr>
         <tr>
-        <h3>Additional Experience</h3>
-        <Experience company="Right Coast Courier" position=" - Manager, Downtown Quality Control; courier" dates="JUNE 2015 - JULY 2017"
-        highlights={[
-          "Managed specialty delivery services for Downtown Boston zone, communicating with clients and team to optimize workflow and negotiate points of contention",
-          "Analyzed and developed solutions for workflow, client relations, training, and supplies",
-          "Delivered more than 50,000 pizzas on a bicycle"
-        ]} />
-        <Experience company="Boston Bike Messenger Association" position=" - Clerk, president, board member" dates="JUNE 2015 - PRESENT" highlights={[
-          "Lead board of long-standing business, community, and social services institution for Boston couriers, organizing fundraisers, events, workshops, races, and other programs",
-          "Enrolled dozens of messengers in health insurance, organizing enrollment drive, developing workshop programming, and supporting members through process, saving thousands of dollars and allowing greater impact for Broken Bones Fund",
-          "Built new ID/member benefit card system for building access and sponsor discounts",
-          "Updated administrative procedures; revised strategic plan; began organizational review"
-        ]} />
+        <td>
+          <h3>Additional Experience</h3>
+          <Experience company="Klein Hornig LLP" position=" - Accounting clerk" dates="JULY 2017 - DDECEMBER 2018"
+          highlights={[
+            "Streamlined, automated reconciliations, reporting, and AP in Juris and Concur",
+            "Provided SOPS, training, and research to improve efficiency and ease of use"
+          ]} />
+          <Experience company="Right Coast Courier" position=" - Operations manager; courier" dates="JUNE 2015 - MARCH 2018"
+          highlights={[
+            "Interfaced with clients and team to optimize workflow, service, training, and client relations",
+            "Delivered more than 50,000 pizzas on a bicycle"
+          ]} />
+          <Experience company="Boston Bike Messenger Association" position=" - Clerk, president, board member" dates="JUNE 2015 - PRESENT" highlights={[
+            "Lead board, organized programs, events, fundraisers, organizational review",
+            "Championed insurance enrollment drive, saving an average $700 per member"
+          ]} />
+        </td>
         </tr>
-        </table>
+        <tr>
+        <td>
         <h3>Education</h3>
         <Experience company="Berkeley High School" dates="AUGUST 2009 - JUNE 2013"
-          highlights={[
-            "AP Biology (5), AP Spanish Literature (5), AP Music Theory (5)",
-            "IB HL English (7), HL History (6)",
-            "SAT with Essay (2290)",
-            "Debate Team (President), Chorus Club (President), Linguistics Club, Math Team"
-          ]}/>
+        highlights={[
+          "AP Spanish Literature (5), Biology (5), Music Theory (5)",
+          "IB HL History of Americas (6), English (7)",
+          "Debate Team (President), Math Team, Linguistics Club"
+        ]}/>
+        <Experience company="Coursera" dates="APRIL 2019" highlights={[
+          "Game Theory, Stanford University & University of British Columbia",
+          "Classical Sociological Theory, University of Amsterdam"
+        ]} />
+        </td>
+        </tr>
+        </tbody>
+        </table>
       </div>
     );
   }
