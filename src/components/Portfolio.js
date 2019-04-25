@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Portfolio.css';
 import map from '../images/map.png';
 import addon from '../images/addon.png';
+
 class Project extends Component {
   render() {
     return (
@@ -26,8 +27,8 @@ class Portfolio extends Component {
       <div>
       <h1>Portfolio</h1>
       <table><tbody>
-      <Project name="Courier Map" image={map} url="https://smcf.nfshost.com/map/" alt="courier map" technologies="JavaScript, Google Maps JavaScript API, MariaDB, PHP, HTML/CSS" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
-      <Project name="Accounting Add-on" image={addon} alt="sheets add-on" url="https://github.com/sofiacf/osc-billing" technologies="Google Apps Script" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
+        <Project name="Courier Map" image={map} url="https://smcf.nfshost.com/map/" alt="courier map" technologies="JavaScript, Google Maps JavaScript API, MariaDB, PHP, HTML/CSS" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
+        <Project name="Accounting Add-on" image={addon} alt="sheets add-on" url="https://github.com/sofiacf/osc-billing" technologies="Google Apps Script" description="Developed quote generator and subcontractor dispatch tool for national courier network. Harnessed data from decades of company’s experience and relationships, creating an interactive GUI and updatable database, enabling any user to optimize dispatch decisions." />
       </tbody></table>
       </div>
     );
@@ -35,4 +36,3 @@ class Portfolio extends Component {
 }
 
 export default Portfolio;
-// ^Bld(Q!81m

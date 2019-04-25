@@ -16,7 +16,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-      <Art />
+      <Art style={{zIndex: '-99'}} />
       <Router>
         <h1><Link to="/">smcf.io</Link></h1>
         <table className="navbar"><tbody><tr>
