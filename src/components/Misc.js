@@ -10,12 +10,10 @@ const Misc = () => {
     return (
       <div>
       <h1>Misc</h1>
-      <table>
-      <tr>
+      <table><tbody><tr>
       <td><h3>Menger sponge cake</h3></td>
       <td><img src={menger} alt="menger sponge cake" /></td>
-      </tr>
-      </table>
+      </tr></tbody></table>
       </div>
     );
 }

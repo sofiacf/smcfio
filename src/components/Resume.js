@@ -30,14 +30,14 @@ class Resume extends Component {
         <td>
           <br />
           <h3>Skills</h3>
-          <ul style={{float: 'left'}}>
+          <ul style={{float: 'left', marginTop: '0'}}>
             <li>JavaScript, HTML/CSS, React</li>
             <li>TypeScript, PHP, MySQL</li>
           </ul>
-          <ul style={{float: 'left'}}>
+          <ul style={{float: 'left', marginTop: '0'}}>
             <li>Aurora, MariaDB, LAMP</li>
             <li>AWS, Python, Git, Arduino</li>
-            </ul>
+          </ul>
         </td>
         </tr>
         <tr>
