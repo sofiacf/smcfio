@@ -2,6 +2,7 @@
   "name": "smcfio",
   "version": "1.0.0",
   "description": "My personal site",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
