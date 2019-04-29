@@ -4,7 +4,7 @@ import '../styles/Art.css';
 const cellSize = 5;
 class Cell extends Component {
   render () {
-    const { x, y} = this.props;
+    const {x, y} = this.props;
     return (
       <div className ="Cell" style={{
         left: `${cellSize * x + 1}px`,
@@ -54,34 +54,27 @@ class Art extends Component {
     let rows = this.state.height / cellSize;
     let cells = [];
     for (let y=0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-        if (blob[y][x]) {cells.push({x, y});}
-      }
+      for (let x = 0; x < cols; x++) if (blob[y][x]) {cells.push({x, y});}
     }
     return cells;
   }
   getElementOffset (){
     const rect = this.blobRef.getBoundingClientRect();
     const doc = document.documentElement;
-    return {
+    return ({
       x: (rect.left + window.pageXOffset) - doc.clientLeft,
       y: (rect.top + window.pageYOffset) - doc.clientTop,
-    };
+    });
   }
   render() {
     const blob = this.makeBlob();
     const cells = this.makeCells(blob);
     return (
-      <div>
-      <div className="Blob"
-      style={{width: this.state.width, height: this.state.height, backgroundSize: `${cellSize}px ${cellSize}px`}}
-      ref={(n) => {this.blobRef = n;}}>
-      {cells.map(cell => (
-        <Cell x={cell.x} y={cell.y}
-        key={`${cell.x},${cell.y}`}/>
-      ))}
-      </div>
-      </div>
+      <div><div className="Blob"
+        style={{width: this.state.width, height: this.state.height, backgroundSize: `${cellSize}px ${cellSize}px`}}
+        ref={(n) => {this.blobRef = n;}}>
+        {cells.map(cell => <Cell x={cell.x} y={cell.y} key={`${cell.x},${cell.y}`}/>)}
+      </div></div>
     );
   }
 }

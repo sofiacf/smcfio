@@ -9,11 +9,11 @@ import menger from '../images/menger.jpg';
 const Misc = () => {
     return (
       <div>
-      <h1>Misc</h1>
-      <table><tbody><tr>
-      <td><h3>Menger sponge cake</h3></td>
-      <td><img src={menger} alt="menger sponge cake" /></td>
-      </tr></tbody></table>
+        <h1>Misc</h1>
+        <table><tbody><tr>
+          <td>Menger sponge cake</td>
+          <td><img src={menger} alt="menger sponge cake" /></td>
+        </tr></tbody></table>
       </div>
     );
 }
