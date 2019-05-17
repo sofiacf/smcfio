@@ -19,12 +19,12 @@ class App extends Component {
         <Art style={{zIndex: '-99'}} />
         <Router>
           <h1><Link to="/">smcf.io</Link></h1>
-          <table className="navbar"><tbody><tr>
-            <td><Link to="/resume">resume</Link></td>
-            <td><Link to="/portfolio">portfolio</Link></td>
-            <td><Link to="/misc">misc.</Link></td>
-            <td><Link to="/contact">contact</Link></td>
-          </tr></tbody></table>
+          <nav>
+            <Link to="/resume">resume</Link>
+            <Link to="/portfolio">portfolio</Link>
+            <Link to="/misc">misc.</Link>
+            <Link to="/contact">contact</Link>
+          </nav>
 
           <Route exact path="/" component={Home} />
           <Route path="/resume" component={Resume} />

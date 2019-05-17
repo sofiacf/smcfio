@@ -1,11 +1,20 @@
+.Art {
+  width: 100%;
+}
 .Blob {
   bottom: 0;
+  height: 55%;
   margin: 0 auto;
   position: fixed;
   right: 0;
+  width: 100%;
   z-index: -99;
 }
 .Cell {
   background: #E2E2E2;
+  border: 1px solid black;
+  display: inline-block;
+  height: 1%;
+  width: 1%;
   position: absolute;
 }

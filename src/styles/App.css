@@ -6,13 +6,13 @@ h1 a {
   color: inherit;
   text-decoration: inherit;
 }
-.navbar {
+nav {
   border-style: double none;
   table-layout: fixed;
   text-align: center;
   width: 100%;
 }
-.navbar a {
+nav a {
   color: inherit;
   text-decoration: inherit;
 }
