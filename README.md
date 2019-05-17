@@ -1,2 +1,2 @@
 # smcfio
-My personal site
+My personal site, smcf.io
