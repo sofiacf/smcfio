@@ -25,8 +25,10 @@
     "braces": "^3.0.2",
     "browserslist": "^4.5.5",
     "google-maps-react": "^2.0.2",
+    "konva": "^3.2.5",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-konva": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.0",
     "typescript": "^3.4.5"
