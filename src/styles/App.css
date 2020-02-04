@@ -1,18 +1,21 @@
 h1 {
-  font-size: 34px;
-  margin-bottom: 8px;
+    font-size: 34px;
+    margin-bottom: 8px;
 }
+
 h1 a {
-  color: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }
-nav {
-  border-style: double none;
-  table-layout: fixed;
-  text-align: center;
-  width: 100%;
+
+nav table {
+    border-style: double none;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
 }
+
 nav a {
-  color: inherit;
-  text-decoration: inherit;
+    color: inherit;
+    text-decoration: inherit;
 }

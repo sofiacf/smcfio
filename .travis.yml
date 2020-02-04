@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YuSbxzUiwI9JH8O9ylIR27sZhHJkKOxjytVk4/ZaeA0ei5/QPAoX4RgQvzpT4kuS8n0KQcY0LUSqY3y5amtlZdcTv0B75tAWs6IQ93kIBXzydqmSHMqdrPV4clHl7EMJley4vK6TNEMEncUtwFxxvm1Tr9xtQtEvg3Xw/3/KH05v9Kgq6cAuFlUHaX9MdT/IthknQaesLBQNkaafSBjwKHOUn7QmFqkIFF4hgReI5keYezryyXX+MfzP/DkMCAXE5zzcDnXi7KFYBZ8mBK5Ju5q6AMeOlFU9BIVMY0exVDbMFNaC5ohnbYZKTL+FK7BPbCDbMOyaiolnBoZ6Ko+xr5Hc6LJuJRA4G/8N/G5DEa1aLbFGXFONHDnZ1CGBkpH7hWvqpPjHyRWmaJ38UGPwgVBd6re1oFDkowNXsUFoZblqCN+BWj95yrVm1vIY5jGgVhMf8QfNifvf8S1HFRZ/IdTolacaTFLcTl2+BvTGHwVEA9eUvBXOwuLXZGP5BpSVMAJ+wh0SLBBDqkE1tFZZsQ1nP2iuRySlGO03idJzI2QXp1HPihoCtNKDksRh/yBO10JGRT4aQofNt59V3y6Ft82IZ0+grSFniGmDb7ODQjxlw01asPnsDZNGOSx1Fs0rOtzDSy0emDiJ4Z2Tu0w1WI7/Gc3F9yuJ0vCnOPdmdP0="
+  app: smcfio
+  on:
+    repo: sofiacf/smcfio
+on:
+  branch: master

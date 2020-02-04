@@ -1,15 +1,18 @@
 .dates {
-  color: gray;
-  font: 12px "Raleway", light;
-  position: static;
-  z-index: 1;
+    color: gray;
+    font: 12px "Raleway", light;
+    position: static;
+    z-index: 1;
 }
+
 .Experience {
-  position: absolute;
+    position: absolute;
 }
+
 .highlights {
-  margin-top: 0;
+    margin-top: 0;
 }
+
 h3 {
-  margin-top: 0;
+    margin-top: 0;
 }

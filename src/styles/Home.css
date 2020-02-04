@@ -1,12 +1,15 @@
 table {
-  margin-top: 25px;
+    margin-top: 25px;
 }
+
 td {
-  vertical-align: top;
+    vertical-align: top;
 }
+
 p {
-  width: 60%;
+    width: 60%;
 }
+
 .email {
-  color: blue;
+    color: blue;
 }
