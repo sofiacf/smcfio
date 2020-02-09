@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - stable
+- stable
 cache:
   directories:
     - node_modules
@@ -9,7 +9,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: u3n+wr0v9wGpov1fE9WiO7CsDoAcdBM9NB00iv1cccRH36A3lsZ/vpgvb3Sd+FGXlJYhi50s1lQAfNSMdd/a2vJo6G0cyT/hjuOZ1x3+nqeefJFXrjWV0pA4o1x6ZJGY/Ia3iPsqnn0Epsaap/JkWNcw03R3RF16unz8qcU7RWITSyfBVEWTVx9JhW/nsU0zEXpplE9CiiYBzfjZCRBFBX10AxrkJ/uQiTcmWwqNsZjBxRAt6zcXdOPgp5spY7Sd+/u040+j7nSo5n8q82UfBYmyesf7l+3bIPxATPAV2fW/6Oqc65iI4fxYj1RQZmL+O/AjefeKDgl7kjKLyC+FvTE0jNxCkDEbAPZkkTT6W8uIkcs0quqMME4FPiX8Duk1Ijcg5Ke2iwfaaHQuTAQ0NBx/KlOhNKX2Y/5608EiQ0Px19LFSdBURO2YZ7wrridbjZKHa7yl/hwjWfzOWjGeo3nyDRpfQIeGJN+jjqf2HkW2lISenOTeQOSNdFRJFFjCqDlvcfR6gpD2C8o/dQN9e8fIwnTxL0jy9sqboE0h3uiEv6UKHvcuONGPXkhEx9FkjEXTNu6G86GoRuOhOQu2IcYXzIjRcg4CLvSLCPmUfmCeEMtDvfzl/XpvczfQX/4sr3L0XwO1QYHWex+9nzdSMuYgxL4Zz36yEsrjoFEgD0M=
+    secure: AeHwde1dSkeho6Lfm/vmad9BXhSSw8OFDniVivglSovmh508OALLZ6pMQ5E6cDfeBWYejjwKD7a2g3AYdK5MsfSy+dYy2OQwfmYnOI/0nY4gBPbNU0JcENiATD5Zm1TgJIS1OKDtTqu+u/pHltidMA4iffL1EP9wVu9qCRZfoOyPrmJ/0h/Q9ULIHdLq9pamgQPVqF13HxDgsZZ5FoSxTEy7V5nXcw/iIB21YPgrK7RROiXzpLPiK856Mo3hNfABSZE3T/Kx6KwvkroK+iKMGHQf8oSBuF6+tNwDP5fvUDEaRVC+vO+iwZdIx3nbTKDkm+oj55d+wpvG0Xr0Gxh7Hwm/7x2+yM4MQz/5wSx0CxOY4swYudPhnmyIW+GQQ9SGJV+gSNY/MoPbJh6QJaDfmMsZcKadGpMbj96ljkHd9GlMFXYczU7TBCrEblcQYlao5NuBsAAFpuWLRl+Ww4uSRZJijkH+Y4k4JKxo7n0s7IQWr9zBAhWdF2EuFzYDOIxf0N8PgPTOxyOIroDRp3pfqluriNwy9r8DpARhEaGExWvoKUkNthMW+I0QDlGpSHGSnI0Tndy1vVq9Mbbv3E8RiCOS3jzViJZFodjjRSDOLpx5WIlfChYkWWbqUKGLA3UVC+oKk6NH6K3qiO2BknINmS3pCIG1WcbP1eVqa8e+j78=
   app: smcfio
   on:
     repo: sofiacf/smcfio
