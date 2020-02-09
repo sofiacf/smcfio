@@ -13,5 +13,3 @@ deploy:
   app: smcfio
   on:
     repo: sofiacf/smcfio
-true:
-  branch: master
