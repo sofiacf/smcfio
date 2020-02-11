@@ -19,19 +19,19 @@ interface EducationProps extends ExperienceProps {
 
 const Skills = () => <>
     <tr>
-        <td>Skilled software engineer delivering reliable innovation.</td>
+        <td>Pragmatic, collaborative software engineer; skilled Agile practitioner geared toward growth.</td>
     </tr>
     <tr>
         <td>
             <br/>
             <h3>Skills</h3>
             <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>TypeScript, React, HTML/CSS</li>
-                <li>Java, Spring, JPA, MySQL</li>
+                <li>React, TypeScript, HTML/CSS</li>
+                <li>Spring Boot, Java, Cloud Foundry</li>
             </ul>
             <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>AWS, PCF, Git, TDD, XP</li>
-                <li>Aurora, MariaDB, LAMP</li>
+                <li>XP, TDD, DDD, UCD, Agile, Lean</li>
+                <li>MySQL, Aurora, AWS, Git</li>
             </ul>
         </td>
     </tr>
@@ -72,16 +72,16 @@ export const Resume = () => <>
                         position="Full stack software engineer"
                         start="JUNE 2019"
                         highlights={ [
-                            'Practiced Extreme Programming, user-centered design, and domain-driven development to develop full-stack web applications',
-                            'Collaborated on balanced teams to build Spring Boot React apps with automated testing and continuous delivery'
+                            'Practiced Extreme Programming to build user-centered products as part of a balanced team',
+                            'Contributed >80,000 lines of code to project work in Air Operations branch'
                         ] }/>
                     <Professional
                         company="1 Shot Couriers"
                         position="JavaScript, Google Apps Script developer"
                         start="NOVEMBER 2018"
                         highlights={ [
-                            'Built Google Apps Script Add-on to handle small business accounting tasks',
-                            'Saved company hundreds of labor hours by automating billing and payroll'
+                            'Created Google Sheets Add-on to automate accounting tasks for small businesses',
+                            'Saved courier company >288 labor hours annually by automating billing and payroll'
                         ] }/>
                     <Professional
                         company="USA Couriers"
@@ -156,12 +156,12 @@ export const Resume = () => <>
                         school="Lynda.com"
                         graduated="2018 - 2019"
                         highlights={ [
+                            'Accessibility for Web Design (Derek Featherstone)',
                             'React: Context API Development (Emmanuel Henri)',
                             'Agile Software Development: Pair and Mob Programming (Chiu-Ki Chan)',
                             'Agile Software Development: Pair and Mob Programming (Lynn Langit)',
                             'Agile Software Development (Shashi Shekhar)',
-                            // eslint-disable-next-line no-script-url
-                            'JavaScript: Patterns (Emmanuel Henri)'
+                            'JavaScript Patterns (Emmanuel Henri)'
                         ] }/>
                     <Education
                         school="Berkeley High School"

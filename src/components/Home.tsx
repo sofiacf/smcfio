@@ -8,7 +8,7 @@ export const Home = () => <main>
             <td style={ { width: '60%' } }>
                 <p>Welcome to smcf.io, homepage of Sofia Chandler-Freed.</p>
                 <p>Please enjoy my portfolio, writing, resume, other odds and ends while you're here.</p>
-                <p>Inclined to comment or inquire? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
+                <p>Comments? Questions? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
                 </p>
                 <p>-Sofia</p>
             </td>
@@ -16,9 +16,8 @@ export const Home = () => <main>
                 <p>Specialties:</p>
                 <ul>
                     <li>React, Typescript, HTML/CSS</li>
-                    <li>Java, Spring Boot, JPA, MySQL</li>
-                    <li>AWS, PCF, Git, TDD, XP</li>
-                    <li>Delivering reliable innovation</li>
+                    <li>Spring Boot, Java, Cloud Foundry</li>
+                    <li>XP, TDD, DDD, UCD, Agile, Lean</li>
                 </ul>
             </td>
         </tr>
