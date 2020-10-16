@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import '../styles/Art.css'
+import React, { useEffect, useState } from 'react';
+import '../styles/Art.css';
 
 const CELL_SIZE = 5
 const Cell: React.FC<{ position: number[] }> = props => {
@@ -7,6 +7,11 @@ const Cell: React.FC<{ position: number[] }> = props => {
     return <div className="cell" style={ { left, top } }/>
 }
 export const Art: React.FC<any> = () => {
+    const [seconds, setSeconds] = useState(0)
+    useEffect(() => {
+        const interval = setInterval(() => setSeconds(previousValue => previousValue + 1), 50);
+        return () => clearInterval(interval)
+    }, [])
     const [size, setSize] = useState({
         width: Math.floor(window.innerWidth),
         height: Math.floor(window.innerHeight * .55)
@@ -34,6 +39,6 @@ export const Art: React.FC<any> = () => {
             }
         }
         setCells(blob)
-    }, [size])
+    }, [size, seconds])
     return <div className="blob">{ cells }</div>
 }
