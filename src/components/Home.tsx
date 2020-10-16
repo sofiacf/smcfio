@@ -17,7 +17,7 @@ export const Home = () => <main>
                 <ul>
                     <li>React, Typescript, HTML/CSS</li>
                     <li>Spring Boot, Java, Cloud Foundry</li>
-                    <li>XP, TDD, DDD, UCD, Agile, Lean</li>
+                    <li>XP, TDD, DDD, CI/CD, Agile, Lean</li>
                 </ul>
             </td>
         </tr>
