@@ -1,19 +1,24 @@
-import React from 'react'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import '../styles/App.css'
-import { Home } from './Home'
-import { Art } from './Art'
-import { Resume } from './Resume'
-import { Portfolio } from './Portfolio'
-import { Notes } from './Notes'
-import { Contact } from './Contact'
+import React from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import '../styles/App.css';
+import { Home } from './Home';
+import { Art } from './Art';
+import { Resume } from './Resume';
+import { Portfolio } from './Portfolio';
+import { Notes } from './Notes';
+import { Contact } from './Contact';
 
 export const App: React.FC = () => <div className="App">
     <Art/>
     <Router>
         <h1><Link to="/">smcf.io</Link></h1>
         <nav>
-            <table>
+            <table style={ {
+                borderStyle: 'double none',
+                tableLayout: 'fixed',
+                textAlign: 'center',
+                width: '100%'
+            } }>
                 <tbody>
                 <tr>
                     <td><Link to="/resume">resume</Link></td>

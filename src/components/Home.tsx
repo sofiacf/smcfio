@@ -1,5 +1,5 @@
-import React from 'react'
-import '../styles/Home.css'
+import React from 'react';
+import '../styles/Home.css';
 
 export const Home = () => <main>
     <table>
@@ -7,7 +7,7 @@ export const Home = () => <main>
         <tr>
             <td style={ { width: '60%' } }>
                 <p>Welcome to smcf.io, homepage of Sofia Chandler-Freed.</p>
-                <p>Please enjoy my portfolio, writing, resume, other odds and ends while you're here.</p>
+                <p>Please enjoy my resume, portfolio, informal writing, and other odds and ends while you're here.</p>
                 <p>Comments? Questions? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
                 </p>
                 <p>-Sofia</p>

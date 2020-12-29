@@ -1,6 +1,41 @@
-import React from 'react'
-import '../styles/Notes.css'
+import React from 'react';
+import '../styles/Notes.css';
+import { FractalFeast } from './notes/FractalFeast';
+import { TherapeuticDialogue } from './notes/TherapeuticDialogue';
+import { DeserveToLive } from './notes/DeserveToLive';
 
-export const Notes: React.FC<any> = () => <main>
+export const Notes: React.FC = () => <main className={ 'notes' }>
+  <h1>Notes</h1>
+  <table>
+    <thead>
+    <tr>
+      <td>Little thoughts and things. Like a blog, but worse</td>
+    </tr>
+    </thead>
+    <tbody>
+    <FractalFeast/>
+    <TherapeuticDialogue/>
+    <DeserveToLive/>
+    </tbody>
+  </table>
+</main>;
 
-</main>
+interface NoteProps {
+  title: string;
+  date: string;
+}
+
+export const Note: React.FC<NoteProps> = props => <>
+  <tr>
+    <td style={ { width: '80%' } }>
+      <h4>{ props.title }</h4>
+    </td>
+    <td><h4>{ props.date }</h4></td>
+  </tr>
+  <tr>
+    <td>
+      <article>{ props.children }</article>
+    </td>
+  </tr>
+  <tr style={ { height: '20px' } }/>
+</>;
