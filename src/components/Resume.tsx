@@ -69,11 +69,11 @@ export const Resume = () => <>
                     <h3>Programming Experience</h3>
                     <Professional
                         company="Kessel Run"
-                        position="Full stack software engineer"
+                        position="Senior software engineer; full stack software engineer"
                         start="JUNE 2019"
                         highlights={ [
-                            'Practiced Extreme Programming to build user-centered products as part of a balanced team',
-                            'Contributed >80,000 lines of code to project work in Air Operations branch'
+                            'Practiced Extreme Programming to build user-centered products as senior engineer on a balanced team',
+                            'Grew engineering practice by planning/curating educational content on Engineering Practice team'
                         ] }/>
                     <Professional
                         company="1 Shot Couriers"
@@ -138,12 +138,10 @@ export const Resume = () => <>
                 <td>
                     <h3>Education</h3>
                     <Education school="Undergraduate courses"
-                               graduated="2019"
+                               graduated="2019 - 2021"
                                highlights={ [
-                                   'MassBay Community College - Calculus',
-                                   'University of the People - Computer Science with Python',
-                                   'Berkeley City College - Math Analysis, English, Chemistry',
-                                   'College of Alameda - German 1A and 1B, Ballet'
+                                   'Cape Cod Community College - Introduction to Computer Systems (A), Programming I: C++ (in progress), Programming II: Java (in progress)',
+                                   'MassBay Community College - Calculus I (B+)',
                                ] }/>
                     <Education
                         school="Coursera"
@@ -165,10 +163,10 @@ export const Resume = () => <>
                         ] }/>
                     <Education
                         school="Berkeley High School"
-                        graduated="JUNE 2013"
+                        graduated="2009 - 2013"
                         highlights={ [
                             'AP Spanish Literature (5), Biology (5), Music Theory (5)',
-                            'IB HL History of Americas (6), English (7)',
+                            'IB HL History of Americas (6), IB HL English (7)',
                             'Debate Team (President), Math Team, Linguistics Club'
                         ] }/>
                 </td>
