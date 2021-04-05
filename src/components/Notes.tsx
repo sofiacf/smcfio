@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Notes.css';
-import { FractalFeast } from './notes/FractalFeast';
-import { TherapeuticDialogue } from './notes/TherapeuticDialogue';
-import { DeserveToLive } from './notes/DeserveToLive';
+import { FractalFeast } from '../content/notes/FractalFeast';
+import { TherapeuticDialogue } from '../content/notes/TherapeuticDialogue';
+import { DeserveToLive } from '../content/notes/DeserveToLive';
 
 export const Notes: React.FC = () => <main className={ 'notes' }>
   <h1>Notes</h1>
@@ -28,7 +28,7 @@ interface NoteProps {
 export const Note: React.FC<NoteProps> = props => <>
   <tr>
     <td style={ { width: '80%' } }>
-      <h4>{ props.title }</h4>
+      <b><h4>{ props.title }</h4></b>
     </td>
     <td><h4>{ props.date }</h4></td>
   </tr>
@@ -38,4 +38,5 @@ export const Note: React.FC<NoteProps> = props => <>
     </td>
   </tr>
   <tr style={ { height: '20px' } }/>
+  <hr/>
 </>;

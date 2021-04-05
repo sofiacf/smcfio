@@ -1,5 +1,5 @@
 import React from 'react';
-import { Note } from '../Notes';
+import { Note } from '../../components/Notes';
 
 export function DeserveToLive() {
   return <Note
