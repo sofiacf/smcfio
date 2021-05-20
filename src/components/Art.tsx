@@ -17,7 +17,7 @@ const Cell: React.FC<{ index: number, color: number[] | null }> = props => {
 
     return props.color ? <div
             className="cell"
-            style={{left, top, background: `rgba(${props.color[0]}, ${props.color[1]}, ${props.color[2]}, .3)`}}
+            style={{left, top, background: `rgba(${props.color[0]}, ${props.color[1]}, ${props.color[2]}, .4)`}}
         />
         : <div key={props.index.toString()}/>;
 };
@@ -60,11 +60,19 @@ export const Art: React.FC<any> = () => {
     const [cells, setCells] = useState<any[]>(new Array(numCells));
 
     useEffect(() => setGameState(() => {
-        if (!numCells) return [];
-        const initialCells: (number[] | null)[] = [];
-        for (let i = 0; i < numCells; i++) initialCells.push(Math.random() < 0.2 ? getRandomColor() : null);
+        if (!numCells || !rows || !cols) return [];
+        const initialCells: (number[] | null)[] = new Array(numCells);
+        const gridToIndex = (x: number, y: number) => x + (y * cols);
+        for (let y = 0; y < rows; y++) {
+            for (let x = 0; x < cols; x++) {
+                const xChance = 1 - (Math.abs(cols / 2 - x) + 20) / cols;
+                const yChance = y / rows;
+                const alive = Math.random() * 3 + 4 * xChance + 2 * yChance > 6;
+                initialCells[gridToIndex(x, y)] = (alive ? getRandomColor() : null);
+            }
+        }
         return initialCells;
-    }), [numCells])
+    }), [rows, cols, numCells])
 
     useEffect(() => setCells(gameState.map((state, index) => {
         return state === null ? null :
