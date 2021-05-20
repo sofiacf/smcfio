@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Resume.css'
+import {PageWrapper} from "./PageWrapper";
 
 interface ExperienceProps {
     highlights: string[]
@@ -17,47 +18,7 @@ interface EducationProps extends ExperienceProps {
     graduated: string
 }
 
-const Skills = () => <>
-    <tr>
-        <td>Pragmatic, collaborative software engineer; skilled Agile practitioner geared toward growth.</td>
-    </tr>
-    <tr>
-        <td>
-            <br/>
-            <h3>Skills</h3>
-            <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>React, TypeScript, HTML/CSS</li>
-                <li>Spring Boot, Java, Cloud Foundry</li>
-            </ul>
-            <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>XP, TDD, DDD, UCD, Agile, Lean</li>
-                <li>MySQL, Aurora, AWS, Git</li>
-            </ul>
-        </td>
-    </tr>
-</>
-const Role = (role: { company: string, position: string }) => <><b>{ role.company }</b> - { role.position }</>
-const Dates = ({ start, end = 'PRESENT' }: Pick<ProfessionalProps, 'start' | 'end'>) => <span
-    className="dates">{ start } - { end }</span>
-const Highlights = (props: Pick<ExperienceProps, 'highlights'>) => <>
-    <ul className="highlights">{ props.highlights.map((val, index) => <li key={ index }>{ val }</li>) }</ul>
-</>
-const Professional = (props: ProfessionalProps) => <div>
-    <Role company={ props.company } position={ props.position }/>
-    <br/>
-    <Dates start={ props.start } end={ props.end }/>
-    <Highlights highlights={ props.highlights }/>
-</div>
-const Education = (props: EducationProps) => <>
-    <div>
-        <b>{ props.school }</b>
-        <br/>
-        <span className="dates">{ props.graduated }</span>
-        <Highlights highlights={ props.highlights }/>
-    </div>
-</>
-
-export const Resume = () => <>
+export const Resume = () => <PageWrapper>
     <div className="resume">
         <h1>Resume</h1>
         <h2>Sofia Chandler-Freed</h2>
@@ -173,5 +134,44 @@ export const Resume = () => <>
             </tr>
             </tbody>
         </table>
+    </div>
+</PageWrapper>
+const Skills = () => <>
+    <tr>
+        <td>Pragmatic, collaborative software engineer; skilled Agile practitioner geared toward growth.</td>
+    </tr>
+    <tr>
+        <td>
+            <br/>
+            <h3>Skills</h3>
+            <ul style={ { float: 'left', marginTop: '0' } }>
+                <li>React, TypeScript, HTML/CSS</li>
+                <li>Spring Boot, Java, Cloud Foundry</li>
+            </ul>
+            <ul style={ { float: 'left', marginTop: '0' } }>
+                <li>XP, TDD, DDD, UCD, Agile, Lean</li>
+                <li>MySQL, Aurora, AWS, Git</li>
+            </ul>
+        </td>
+    </tr>
+</>
+const Role = (role: { company: string, position: string }) => <><b>{ role.company }</b> - { role.position }</>
+const Dates = ({ start, end = 'PRESENT' }: Pick<ProfessionalProps, 'start' | 'end'>) => <span
+    className="dates">{ start } - { end }</span>
+const Highlights = (props: Pick<ExperienceProps, 'highlights'>) => <>
+    <ul className="highlights">{ props.highlights.map((val, index) => <li key={ index }>{ val }</li>) }</ul>
+</>
+const Professional = (props: ProfessionalProps) => <div>
+    <Role company={ props.company } position={ props.position }/>
+    <br/>
+    <Dates start={ props.start } end={ props.end }/>
+    <Highlights highlights={ props.highlights }/>
+</div>
+const Education = (props: EducationProps) => <>
+    <div>
+        <b>{ props.school }</b>
+        <br/>
+        <span className="dates">{ props.graduated }</span>
+        <Highlights highlights={ props.highlights }/>
     </div>
 </>

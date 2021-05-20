@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Home.css';
+import {PageWrapper} from "./PageWrapper";
 
-export const Home = () => <main>
+export const Home = () => <PageWrapper>
     <table>
         <tbody>
         <tr>
@@ -23,4 +24,4 @@ export const Home = () => <main>
         </tr>
         </tbody>
     </table>
-</main>
+</PageWrapper>

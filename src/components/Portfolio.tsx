@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Portfolio.css'
 import map from '../images/map.png'
 import addon from '../images/addon.png'
+import {PageWrapper} from "./PageWrapper";
 
 interface ProjectProps {
     url: string;
@@ -24,7 +25,7 @@ const Project: React.FC<ProjectProps> = props => <tr>
     </td>
 </tr>
 
-export const Portfolio = () => <main>
+export const Portfolio = () => <PageWrapper>
     <h1>Portfolio</h1>
     <table>
         <tbody>
@@ -46,4 +47,4 @@ export const Portfolio = () => <main>
         />
         </tbody>
     </table>
-</main>
+</PageWrapper>

@@ -3,8 +3,9 @@ import '../styles/Notes.css';
 import { FractalFeast } from '../content/notes/FractalFeast';
 import { TherapeuticDialogue } from '../content/notes/TherapeuticDialogue';
 import { DeserveToLive } from '../content/notes/DeserveToLive';
+import {PageWrapper} from "./PageWrapper";
 
-export const Notes: React.FC = () => <main className={ 'notes' }>
+export const Notes: React.FC = () => <PageWrapper className={ 'notes' }>
   <h1>Notes</h1>
   <table>
     <thead>
@@ -18,7 +19,7 @@ export const Notes: React.FC = () => <main className={ 'notes' }>
     <DeserveToLive/>
     </tbody>
   </table>
-</main>;
+</PageWrapper>;
 
 interface NoteProps {
   title: string;
