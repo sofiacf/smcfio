@@ -1,7 +1,8 @@
 import React from 'react'
-import '../styles/Portfolio.css'
+import '../styles/Projects.css'
 import map from '../images/map.png'
 import addon from '../images/addon.png'
+import bridge from '../images/bridge.png'
 import {PageWrapper} from "./PageWrapper";
 
 interface ProjectProps {
@@ -14,24 +15,32 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = props => <tr>
-    <td style={ { width: '65%' } }>
-        <h3><a href={ props.url }>{ props.name }</a></h3>
-        <p>{ props.technologies }</p>
-        <div>{ props.description }</div>
+    <td style={{width: '65%'}}>
+        <h3><a href={props.url}>{props.name}</a></h3>
+        <p>{props.technologies}</p>
+        <div>{props.description}</div>
         <br/>
     </td>
     <td>
-        <img src={ props.image } alt={ props.alt }/>
+        <img src={props.image} alt={props.alt}/>
     </td>
 </tr>
 
-export const Portfolio = () => <PageWrapper>
-    <h1>Portfolio</h1>
+export const Projects = () => <PageWrapper>
+    <h1>Projects</h1>
     <table>
         <tbody>
         <Project
+            name="Marine Concrete Corrosion Simulator"
+            alt="marine corrosion simulator"
+            url="http://corrosion.smcf.io"
+            technologies="Python, React"
+            description="Collaborated with friends to build interactive marine concrete corrosion simulator"
+            image={bridge}
+        />
+        <Project
             name="Courier Map"
-            image={ map }
+            image={map}
             url="https://smcf.nfshost.com/map/"
             alt="courier map"
             technologies="JavaScript, Google Maps JavaScript API, MariaDB, PHP, HTML/CSS"
@@ -39,7 +48,7 @@ export const Portfolio = () => <PageWrapper>
         />
         <Project
             name="Accounting Add-on"
-            image={ addon }
+            image={addon}
             alt="sheets add-on"
             url="https://github.com/sofiacf/osc-billing"
             technologies="Google Apps Script"

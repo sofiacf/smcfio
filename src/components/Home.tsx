@@ -8,7 +8,7 @@ export const Home = () => <PageWrapper>
         <tr>
             <td style={ { width: '60%' } }>
                 <p>Welcome to smcf.io, homepage of Sofia Chandler-Freed.</p>
-                <p>Please enjoy my resume, portfolio, informal writing, and other odds and ends while you're here.</p>
+                <p>Please enjoy my resume, projects, informal writing, and other odds and ends while you're here.</p>
                 <p>Comments? Questions? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
                 </p>
                 <p>-Sofia</p>

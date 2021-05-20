@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import '../styles/App.css';
 import {Home} from './Home';
 import {Resume} from './Resume';
-import {Portfolio} from './Portfolio';
+import {Projects} from './Projects';
 import {Notes} from './Notes';
 import {Contact} from './Contact';
 
@@ -20,7 +20,7 @@ export const App: React.FC = () => <div className="App">
                 <tbody>
                 <tr>
                     <td><Link to="/resume">resume</Link></td>
-                    <td><Link to="/portfolio">portfolio</Link></td>
+                    <td><Link to="/projects">projects</Link></td>
                     <td><Link to="/notes">notes</Link></td>
                     <td><Link to="/contact">contact</Link></td>
                 </tr>
@@ -29,7 +29,7 @@ export const App: React.FC = () => <div className="App">
         </nav>
         <Route exact path="/" component={ Home }/>
         <Route path="/resume" component={ Resume }/>
-        <Route path="/portfolio" component={ Portfolio }/>
+        <Route path="/projects" component={ Projects }/>
         <Route path="/notes" component={ Notes }/>
         <Route path="/contact" component={ Contact }/>
     </Router>
