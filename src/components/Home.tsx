@@ -12,6 +12,8 @@ export const Home = () => <PageWrapper>
                 <p>Comments? Questions? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
                 </p>
                 <p>-Sofia</p>
+                <br/>
+                <p>Looking for the concrete corrosion simulator? It's <a href="http://corrosion.smcf.io">here</a>!</p>
             </td>
             <td>
                 <p>Specialties:</p>
