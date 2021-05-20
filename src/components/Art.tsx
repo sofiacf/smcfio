@@ -1,27 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../styles/Art.css';
 
-const CELL_SIZE = 12;
-
-const getRandomColor = () => [Math.random() * 255, Math.random() * 255, Math.random() * 255];
-const getNeighborColor = (color: number[] | null) => (color ?? [1, 1, 1]).map(value => (value + (Math.random() * 255)) / 2);
-
-const Cell: React.FC<{ index: number, color: number[] | null }> = props => {
-    const size = {
-        width: Math.floor(window.innerWidth),
-        height: Math.floor(window.innerHeight)
-    }
-    const cols = Math.floor(size.width / CELL_SIZE);
-    const indexToGrid = (index: number) => [index % cols, index / cols];
-    const [left, top] = indexToGrid(props.index).map(index => `${CELL_SIZE * index + 1}px`);
-
-    return props.color ? <div
-            className="cell"
-            style={{left, top, background: `rgba(${props.color[0]}, ${props.color[1]}, ${props.color[2]}, .4)`}}
-        />
-        : <div key={props.index.toString()}/>;
-};
-
 export const Art: React.FC<any> = () => {
     const [seconds, setSeconds] = useState(0);
     useEffect(() => {
@@ -62,13 +41,12 @@ export const Art: React.FC<any> = () => {
     useEffect(() => setGameState(() => {
         if (!numCells || !rows || !cols) return [];
         const initialCells: (number[] | null)[] = new Array(numCells);
-        const gridToIndex = (x: number, y: number) => x + (y * cols);
         for (let y = 0; y < rows; y++) {
             for (let x = 0; x < cols; x++) {
                 const xChance = 1 - (Math.abs(cols / 2 - x) + 20) / cols;
                 const yChance = y / rows;
                 const alive = Math.random() * 3 + 4 * xChance + 2 * yChance > 6;
-                initialCells[gridToIndex(x, y)] = (alive ? getRandomColor() : null);
+                initialCells[gridToIndex(x, y, cols)] = (alive ? getRandomColor() : null);
             }
         }
         return initialCells;
@@ -79,18 +57,17 @@ export const Art: React.FC<any> = () => {
             <Cell color={gameState[index]} index={index}/>
     })), [gameState]);
 
-    useEffect(() => {
+    useEffect(function updateGameState() {
         if (!rows || !cols) return;
-        const gridToIndex = (x: number, y: number) => x + (y * cols);
         setGameState(gameState => {
             const newColors = new Array(gameState.length);
             const isAlive = (x: number, y: number): number => {
                 if (x < 0 || x >= cols || y < 0 || y >= rows) return 0;
-                return gameState[gridToIndex(x, y)] ? 1 : 0;
+                return gameState[gridToIndex(x, y, cols)] ? 1 : 0;
             }
             for (let x = 0; x < cols; x++) {
                 for (let y = 0; y < rows; y++) {
-                    let centerIndex = gridToIndex(x, y);
+                    let centerIndex = gridToIndex(x, y, cols);
                     let numAlive = isAlive(x - 1, y - 1)
                         + isAlive(x, y - 1)
                         + isAlive(x + 1, y - 1)
@@ -109,4 +86,25 @@ export const Art: React.FC<any> = () => {
     }, [cols, rows, seconds]);
 
     return <div className="blob">{cells}</div>;
+};
+
+const CELL_SIZE = 12;
+const getRandomColor = () => [Math.random() * 255, Math.random() * 255, Math.random() * 255];
+const getNeighborColor = (color: number[] | null) => (color ?? [1, 1, 1]).map(value => (value + (Math.random() * 255)) / 2);
+const gridToIndex = (x: number, y: number, cols: number) => x + (y * cols);
+
+const Cell: React.FC<{ index: number, color: number[] | null }> = props => {
+    const size = {
+        width: Math.floor(window.innerWidth),
+        height: Math.floor(window.innerHeight)
+    }
+    const cols = Math.floor(size.width / CELL_SIZE);
+    const indexToGrid = (index: number) => [index % cols, index / cols];
+    const [left, top] = indexToGrid(props.index).map(index => `${CELL_SIZE * index + 1}px`);
+
+    return props.color ? <div
+            className="cell"
+            style={{left, top, background: `rgba(${props.color[0]}, ${props.color[1]}, ${props.color[2]}, .4)`}}
+        />
+        : <div key={props.index.toString()}/>;
 };
