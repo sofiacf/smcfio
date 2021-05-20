@@ -101,7 +101,7 @@ export const Resume = () => <PageWrapper>
                     <Education school="Undergraduate courses"
                                graduated="2019 - 2021"
                                highlights={ [
-                                   'Cape Cod Community College - Introduction to Computer Systems (A), Programming I: C++ (in progress), Programming II: Java (in progress)',
+                                   'Cape Cod Community College - Introduction to Computer Systems (A), Programming I: C++ (A), Programming II: Java (A)',
                                    'MassBay Community College - Calculus I (B+)',
                                ] }/>
                     <Education
