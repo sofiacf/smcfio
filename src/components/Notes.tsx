@@ -15,7 +15,7 @@ export const Notes: React.FC = () => <PageWrapper className={ 'notes' }>
     </thead>
     <tbody>
     <FractalFeast/>
-    <TherapeuticDialogue/>
+    {/*<TherapeuticDialogue/>*/}
     <DeserveToLive/>
     </tbody>
   </table>
