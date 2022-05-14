@@ -8,6 +8,14 @@ nav a, h1 a {
     text-decoration: inherit;
 }
 
+p {
+    font-size: 1rem;
+}
+
+table {
+    margin-top: 25px;
+}
+
 div {
     background-color: rgba(255, 255, 255, .4);
 }

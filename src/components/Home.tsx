@@ -1,29 +1,37 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/Home.css';
 import {PageWrapper} from "./PageWrapper";
 
 export const Home = () => <PageWrapper>
-    <table>
-        <tbody>
-        <tr>
-            <td style={ { width: '60%' } }>
-                <p>Welcome to smcf.io, homepage of Sofia Chandler-Freed.</p>
-                <p>Please enjoy my resume, projects, informal writing, and other odds and ends while you're here.</p>
-                <p>Comments? Questions? <a className="email" href="mailto:sofia@smcf.io">Email me</a>!
-                </p>
-                <p>-Sofia</p>
-                <br/>
-                <p>Looking for the concrete corrosion simulator? It's <a href="http://corrosion.smcf.io">here</a>!</p>
-            </td>
-            <td>
-                <p>Specialties:</p>
-                <ul>
-                    <li>React, Typescript, HTML/CSS</li>
-                    <li>Spring Boot, Java, Cloud Foundry</li>
-                    <li>XP, TDD, DDD, CI/CD, Agile, Lean</li>
-                </ul>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    <div className={'home'}>
+        <div>
+            <p>Hi, I'm Sofia Chandler-Freed.</p>
+            <p>I'm a nontraditional student, software engineer, classical singer, and former bike messenger near
+                Boston.
+            </p>
+            <p>
+                <dl>
+                    <dt>Interested in:</dt>
+                    <dd>- philosophy</dd>
+                    <dd>- linguistics</dd>
+                    <dd>- computer science, and</dd>
+                    <dd>- humor</dd>
+                </dl>
+            </p>
+
+        </div>
+        <div>
+            <p>
+                <dl>
+                    <dt>You can:</dt>
+                    <dd>- <a className="email" href="mailto:sofia@smcf.io">email me</a> (sofia@smcf.io)</dd>
+                    <dd>- <Link to={'/contact'}>find me on the web</Link></dd>
+                    <dd>- look around here</dd>
+                </dl>
+            </p>
+            <br/>
+            <p>Looking for the concrete corrosion simulator? It's <a href="http://corrosion.smcf.io">here</a>!</p>
+        </div>
+    </div>
 </PageWrapper>

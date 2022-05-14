@@ -1,15 +1,9 @@
-table {
-    margin-top: 25px;
+.home p {
+    width: 70%;
 }
-
-td {
-    vertical-align: top;
+.home {
+    margin-top: 35px;
 }
-
-p {
-    width: 60%;
-}
-
-.email {
+.home .email {
     color: blue;
 }
