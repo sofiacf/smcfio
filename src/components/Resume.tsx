@@ -1,177 +1,227 @@
-import React from 'react'
+import React, {ReactNode} from 'react'
 import '../styles/Resume.css'
 import {PageWrapper} from "./PageWrapper";
 
-interface ExperienceProps {
+type ExperienceProps = {
     highlights: string[]
-}
-
-interface ProfessionalProps extends ExperienceProps {
+    institution: string
+    title: string
+    location: string
     start: string
     end?: string
-    company: string
-    position: string
 }
+type AwardProps = Omit<ExperienceProps, 'end' | 'start' | 'highlights'> & { date: string }
 
-interface EducationProps extends ExperienceProps {
-    school: string
-    graduated: string
-}
-
-export const Resume = () => <PageWrapper>
-    <div className="resume">
-        <h1>Resume</h1>
-        <h2>Sofia Chandler-Freed</h2>
-        <table>
-            <tbody>
-            <Skills/>
-            <tr>
-                <td>
-                    <h3>Programming Experience</h3>
-                    <Professional
-                        company="Kessel Run"
-                        position="Senior software engineer; full stack software engineer"
-                        start="JUNE 2019"
-                        highlights={ [
-                            'Practiced Extreme Programming to build user-centered products as senior engineer on a balanced team',
-                            'Grew engineering practice by planning/curating educational content on Engineering Practice team'
-                        ] }/>
-                    <Professional
-                        company="1 Shot Couriers"
-                        position="JavaScript, Google Apps Script developer"
-                        start="NOVEMBER 2018"
-                        highlights={ [
-                            'Created Google Sheets Add-on to automate accounting tasks for small businesses',
-                            'Saved courier company >288 labor hours annually by automating billing and payroll'
-                        ] }/>
-                    <Professional
-                        company="USA Couriers"
-                        position="Dispatcher; web developer"
-                        start="DECEMBER 2018"
-                        end="MARCH 2019"
-                        highlights={ [
-                            'Created quote generator and visual dispatch tool for national courier network',
-                            'Harnessed decades of data to standardize and optimize dispatch decisions'
-                        ] }/>
-                    <Professional
-                        company="Symbol Flux"
-                        position="Co-founder; JavaScript, Python developer"
-                        start="OCTOBER 2014"
-                        end="FEBRUARY 2015"
-                        highlights={ [
-                            'Contributed to initial founding of innovative developer tools start-up',
-                            'Navigated start-up process in Germany, various project contributions'
-                        ] }/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Additional Experience</h3>
-                    <Professional
-                        company="Klein Hornig LLP"
-                        position="Accounting clerk"
-                        start="JULY 2017"
-                        end="DECEMBER 2018"
-                        highlights={ [
-                            'Streamlined, automated reconciliations, reporting, and AP in Juris and Concur',
-                            'Provided SOPS, training, and research to improve efficiency and ease of use'
-                        ] }/>
-                    <Professional
-                        company="Right Coast Courier"
-                        position="Operations manager; courier"
-                        start="JUNE 2015"
-                        end="MARCH 2018"
-                        highlights={ [
-                            'Interfaced with clients and team to optimize workflow, service, training, and client relations',
-                            'Delivered more than 50,000 pizzas on a bicycle'
-                        ] }/>
-                    <Professional
-                        company="Boston Bike Messenger Association"
-                        position="Clerk, president, board member"
-                        start="JUNE 2015"
-                        highlights={ [
-                            'Lead board, organized programs, events, fundraisers, organizational review',
-                            'Championed insurance enrollment drive, saving an average $700 per member'
-                        ] }/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Education</h3>
-                    <Education school="Undergraduate courses"
-                               graduated="2019 - 2021"
-                               highlights={ [
-                                   'Cape Cod Community College - Introduction to Computer Systems (A), Programming I: C++ (A), Programming II: Java (A)',
-                                   'MassBay Community College - Calculus I (B+)',
-                               ] }/>
-                    <Education
-                        school="Coursera"
-                        graduated="2016"
-                        highlights={ [
-                            'Game Theory (Stanford University & University of British Columbia)',
-                            'Classical Sociological Theory (University of Amsterdam)'
-                        ] }/>
-                    <Education
-                        school="Lynda.com"
-                        graduated="2018 - 2019"
-                        highlights={ [
-                            'Accessibility for Web Design (Derek Featherstone)',
-                            'React: Context API Development (Emmanuel Henri)',
-                            'Agile Software Development: Pair and Mob Programming (Chiu-Ki Chan)',
-                            'Agile Software Development: Pair and Mob Programming (Lynn Langit)',
-                            'Agile Software Development (Shashi Shekhar)',
-                            'JavaScript Patterns (Emmanuel Henri)'
-                        ] }/>
-                    <Education
-                        school="Berkeley High School"
-                        graduated="2009 - 2013"
-                        highlights={ [
-                            'AP Spanish Literature (5), Biology (5), Music Theory (5)',
-                            'IB HL History of Americas (6), IB HL English (7)',
-                            'Debate Team (President), Math Team, Linguistics Club'
-                        ] }/>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+export const Resume = () => <PageWrapper className="resume">
+    <h1>CV</h1>
+    <table>
+        <thead>
+        <TwoColFlex
+            col1={<>
+                <h4>Sofia Chandler-Freed</h4>
+                Somerville, MA
+            </>}
+            col2={<>sofia@smcf.io</>}
+        />
+        </thead>
+        <tbody>
+        <Education/>
+        <ProfessionalExperience/>
+        <VolunteerExperience/>
+        <Awards/>
+        </tbody>
+    </table>
 </PageWrapper>
-const Skills = () => <>
-    <tr>
-        <td>Pragmatic, collaborative software engineer; skilled Agile practitioner geared toward growth.</td>
-    </tr>
-    <tr>
-        <td>
-            <br/>
-            <h3>Skills</h3>
-            <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>React, TypeScript, HTML/CSS</li>
-                <li>Spring Boot, Java, Cloud Foundry</li>
-            </ul>
-            <ul style={ { float: 'left', marginTop: '0' } }>
-                <li>XP, TDD, DDD, UCD, Agile, Lean</li>
-                <li>MySQL, Aurora, AWS, Git</li>
-            </ul>
+
+const Education = () => <>
+    <SectionHeader>Education</SectionHeader>
+    <Experience
+        institution="Wellesley College"
+        title="BA (undeclared)"
+        start="September 2022"
+        end="expected May 2025"
+        location="Wellesley, MA"
+        highlights={[]}
+    />
+    <Experience
+        institution="Cape Cod Community College"
+        title="AA in Liberal Arts (GPA: 4.0)"
+        start="January 2021"
+        end="May 2022"
+        location="West Barnstable, MA"
+        highlights={[
+            'Phi Theta Kappa',
+            'Supplemental Instruction leader (Programming 1: Java)',
+        ]}
+    />
+    <Experience
+        institution="Berkeley High School"
+        title="Berkeley International High School"
+        location="Berkeley, CA"
+        start="2009"
+        end="2013"
+        highlights={[
+            'President, Linguistics Club, Speech Team',
+            'Co-president, Chorus Club',
+            'IB HL History of Americas, English',
+            'AP Spanish Lit., Biology, Music Theory'
+        ]}
+    />
+    <Experience
+        institution="Independent Learning"
+        location="Online"
+        title="Lynda.com, Coursera"
+        start="2016, 2018"
+        end="2020"
+        highlights={[
+            'Game Theory (Stanford & UBC)',
+            'Classical Sociological Theory (UvA)',
+            'Accessibility for Web Design (Featherstone)',
+            'Agile Software Development (Shekhar)',
+        ]}
+    />
+</>
+const ProfessionalExperience = () => <>
+    <SectionHeader>Professional Experience</SectionHeader>
+    <Skills/>
+    <Experience
+        institution="US Air Force, Kessel Run Experimentation Lab"
+        title="Software engineer (NH-03), Secret clearance"
+        location="Boston, MA"
+        start="June 2019"
+        end="November 2021"
+        highlights={[
+            'Designed, built, tested, and operated critical mission planning software used in air operations centers.',
+            'Established engineering standards, planned and organized training as Engineering Practice leader.'
+        ]}
+    />
+    <Experience
+        institution="USA Couriers"
+        location="Newton, MA"
+        title="Dispatcher, web developer"
+        start="2018"
+        end="2019"
+        highlights={[
+            'Created quote generator and visual dispatch tool for national courier network.',
+            'Captured legacy data in modern DB to standardize and optimize dispatch decisions.'
+        ]}
+    />
+    <Experience
+        institution="Klein Hornig LLP"
+        location="Boston, MA"
+        title="Accounting clerk"
+        start="2017"
+        end="2018"
+        highlights={[
+            'Coordinated case closing between housing developers, outside counsel, and government agencies.',
+            'Lead research and innovation to streamline and automate card reconciliations, reporting, and A/P processes.'
+        ]}
+    />
+    <Experience
+        institution="Right Coast Courier"
+        location="Boston, MA"
+        title="Operations manager, dispatcher, courier"
+        start="2015"
+        end="2018"
+        highlights={[
+            'Lead team to provide exceptional service to food and legal clients; handled operations, workflow optimizations.',
+            'Delivered more than 50,000 pizzas on a bicycle for independent restaurant delivery service.'
+        ]}
+    />
+</>
+const VolunteerExperience = () => <>
+    <SectionHeader>Volunteer Experience</SectionHeader>
+    <Experience
+        institution="Boston Bike Messenger Association"
+        location="Boston, MA"
+        title="Clerk, president, board member"
+        start="2015"
+        highlights={[
+            'Lead board, organized programs, events, fundraisers, organizational review',
+            'Championed insurance enrollment drive, saving an average $700 per member'
+        ]}
+    />
+    <Experience
+        institution="Star (*) Bike Messenger Association"
+        location=""
+        title="Co-founder, treasurer, board member"
+        start="2015"
+        end="2017"
+        highlights={[
+            'Drafted International Federation of Bicycle Messenger Associations guidelines for inclusive championships.',
+            'Organized and moderated community activities, including forums, international gatherings, and fundraisers.'
+        ]}
+    />
+</>
+const Awards = () => <>
+    <SectionHeader>Awards</SectionHeader>
+    <Award
+        institution="US Air Force"
+        title="Exemplary Civilian Service Award"
+        location="Hanscom Air Force Base"
+        date="November 2021"
+    />
+    <Award
+        institution="North American Cycle Courier Championship"
+        title="Queen of Track (2016), Track President (2018)"
+        location="NYC; Philadelphia, PA"
+        date="November 2021"
+    />
+    <Award
+        institution="San Francisco Symphony Chorus"
+        title="Grammy Awards for Best Classical Album, Best Choral Performance on a Classical Album"
+        location="San Francisco, CA"
+        date="2010"
+    />
+</>
+
+const Skills = () => <tr>
+    <td>
+        <b>Skills:</b> React, TS, HTML5, Node.js, Express, Java, Spring Boot, MySQL, XP, TDD, AWS, Excel
+    </td>
+</tr>
+const SectionHeader: React.FC = ({children}) => <tr>
+    <td>
+        <h3>{children}</h3>
+        <hr/>
+    </td>
+</tr>;
+const Experience = (props: ExperienceProps) => <>
+    <TwoColFlex
+        col1={<><h4>{props.institution}</h4>
+            <em>{props.title}</em></>}
+        col2={<>
+            <div>{props.location}</div>
+            <Dates {...props}/>
+        </>}>
+        <Highlights highlights={props.highlights}/>
+    </TwoColFlex>
+</>
+const Award = (props: AwardProps) => <TwoColFlex
+    col1={<><h4>{props.institution}</h4>
+        <em>{props.title}</em></>}
+    col2={<>
+        <div>{props.location}</div>
+        <em>{props.date}</em>
+    </>}
+/>
+const Dates = ({start, end = 'present'}: Partial<ExperienceProps>) => <em>{start} - {end}</em>
+const Highlights = (props: Pick<ExperienceProps, 'highlights'>) => <div>
+    <ul>
+        {props.highlights.map((val, index) => <li key={index}>{val}</li>)}
+    </ul>
+</div>
+type ColProps = { col1: ReactNode, col2: ReactNode };
+const TwoColFlex: React.FC<ColProps> = ({col1, col2, children}) => <>
+    <tr style={{display: 'flex', marginTop: 0}}>
+        <td style={{width: "max-content"}}>
+            {col1}
+        </td>
+        <td style={{flexGrow: 1, textAlign: "right"}}>
+            {col2}
         </td>
     </tr>
-</>
-const Role = (role: { company: string, position: string }) => <><b>{ role.company }</b> - { role.position }</>
-const Dates = ({ start, end = 'PRESENT' }: Pick<ProfessionalProps, 'start' | 'end'>) => <span
-    className="dates">{ start } - { end }</span>
-const Highlights = (props: Pick<ExperienceProps, 'highlights'>) => <>
-    <ul className="highlights">{ props.highlights.map((val, index) => <li key={ index }>{ val }</li>) }</ul>
-</>
-const Professional = (props: ProfessionalProps) => <div>
-    <Role company={ props.company } position={ props.position }/>
-    <br/>
-    <Dates start={ props.start } end={ props.end }/>
-    <Highlights highlights={ props.highlights }/>
-</div>
-const Education = (props: EducationProps) => <>
-    <div>
-        <b>{ props.school }</b>
-        <br/>
-        <span className="dates">{ props.graduated }</span>
-        <Highlights highlights={ props.highlights }/>
-    </div>
+    <tr>
+        <td style={{paddingTop: 0}}>{children}</td>
+    </tr>
 </>

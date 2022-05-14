@@ -1,14 +1,25 @@
-.dates {
-    color: gray;
-    font: 12px "Raleway", light;
-    position: static;
-    z-index: 1;
+.resume td {
+    padding-top: 1rem;
 }
 
-.highlights {
+.resume table {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
-h3 {
+.resume h3, .resume h4 {
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.resume h3 {
+    font-variant: small-caps;
+}
+
+.resume hr {
+    margin: 0 0 10px 0;
+}
+
+.resume b {
+    font-weight: normal;
 }

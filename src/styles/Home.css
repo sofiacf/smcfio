@@ -1,5 +1,5 @@
 .home p {
-    width: 70%;
+    max-width: 550px;
 }
 .home {
     margin-top: 35px;

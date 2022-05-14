@@ -1,5 +1,9 @@
 body {
-    font: 14px "Cutive Mono", monospace;
+    font: 1rem "Bitter" ;
+    font-weight: lighter;
+}
+
+body > * {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -8,4 +12,17 @@ body {
 .Art {
     position: absolute;
     z-index: -99;
+}
+
+h3, h4, b {
+    font-weight: normal;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#root {
+    height: 100%;
 }

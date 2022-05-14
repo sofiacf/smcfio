@@ -24,11 +24,11 @@
     "babel-cli": "^6.18.0",
     "babel-preset-react-app": "^3.1.2",
     "braces": "3.0.2",
-    "browserslist": "4.16.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3"
+    "browserslist": "^4.16.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,9 +49,9 @@
     "ansi-styles": "3.2.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.3",
-    "@types/react-dom": "17.0.3",
-    "@types/react-router-dom": "5.1.7",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router-dom": "^5.1.7",
     "source-map-loader": "^0.2.4",
     "ts-loader": "6.2.1",
     "typescript": "4.2.3"

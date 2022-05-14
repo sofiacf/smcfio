@@ -6,10 +6,11 @@ export function FractalFeast() {
         title={'Fractal Feast'}
         date={'12-24-20'}
     >
-        A few years ago, for no particular occasion, I prepared a fractal feast. My guests had a range of "normal",
+        <p>A few years ago, for no particular occasion, I prepared a fractal feast. My guests had a range of "normal",
         vegan, ketogenic, and kosher diets. If you accommodate all these dietary restrictions, it is probably impossible
         to accommodate nut allergies. But if you can deal with some carbs, swap out anything almond flour with a more
         traditional recipe; you won't be able to claim Mandelbrot, unfortunately.
+        </p>
         <dl>
             <dt>The menu:</dt>
             <dd>Romanesco broccoli</dd>
@@ -23,10 +24,8 @@ export function FractalFeast() {
             anything particularly fancy. This is a dairy dish, so maybe you want to put some cheese on it. Parm? I bet
             it'd be good with soy sauce. Caution: season this, or it'll be plain!</p>
         <p><b>Sierpinski-Mandelbrot pizza</b> is a hexagonal pizza with an almond flour crust, with little triangles on
-            top. I
-            used Daiya "cheese" shreds for this, but if you're not vegan you're sure to have better results with
-            so-called
-            "real cheese".</p>
+            top. I used Daiya "cheese" shreds for this, but if you're not vegan you're sure to have better results with
+            so-called "real cheese".</p>
         <dl>
             <dt>Ingredients I used for the crust:</dt>
             <dd>3/4 cup almond flour</dd>
@@ -46,8 +45,9 @@ export function FractalFeast() {
             <li>Wham, bam, done!!</li>
         </ol>
 
-        <p>Finally, the <b>Menger sponge cake</b>. This is your warning: this <b>FELL APART</b> when I made it.
-            I suggest you instead use your preferred sponge cake recipe and hope for the best. As for the masochists
+        <p>Finally, the <b>Menger sponge cake</b>. This is your warning: this <strong>fell apart</strong> when I made
+            it.
+            I suggest you instead use your preferred sponge cake recipe and hope for the best. For the masochists
             among us, read on.</p>
         <dl>
             <dt>You'll need:</dt>

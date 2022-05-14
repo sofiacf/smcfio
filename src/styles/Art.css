@@ -6,9 +6,3 @@
     width: 100%;
     z-index: -99;
 }
-
-.cell {
-    height: 4px;
-    width: 4px;
-    position: absolute;
-}
