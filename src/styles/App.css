@@ -8,6 +8,10 @@ nav a, h1 a {
     text-decoration: inherit;
 }
 
+ol {
+    margin-block-start: 0;
+}
+
 p {
     font-size: 1rem;
 }
@@ -16,16 +20,16 @@ table {
     margin: 25px 0 0 0;
     width: 100%;
 }
+
 ul {
     list-style: none;
 }
 
-li {
-    padding-left: 1em;
+ul > li {
     text-indent: -1em;
 }
 
-li:before {
+ul > li:before {
     content: "-";
     padding-right: 5px;
 }

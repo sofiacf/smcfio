@@ -7,16 +7,18 @@ export function FractalFeast() {
         date={'12-24-20'}
     >
         <p>A few years ago, for no particular occasion, I prepared a fractal feast. My guests had a range of "normal",
-        vegan, ketogenic, and kosher diets. If you accommodate all these dietary restrictions, it is probably impossible
-        to accommodate nut allergies. But if you can deal with some carbs, swap out anything almond flour with a more
-        traditional recipe; you won't be able to claim Mandelbrot, unfortunately.
+            vegan, ketogenic, and kosher diets. If you accommodate all these dietary restrictions, it is probably
+            impossible
+            to accommodate nut allergies. But if you can deal with some carbs, swap out anything almond flour with a
+            more
+            traditional recipe; you won't be able to claim Mandelbrot, unfortunately.
         </p>
-        <dl>
-            <dt>The menu:</dt>
-            <dd>Romanesco broccoli</dd>
-            <dd>Sierpinski-Mandelbrot pizza</dd>
-            <dd>Menger sponge cake</dd>
-        </dl>
+        <label>The menu:</label>
+        <ul>
+            <li>Romanesco broccoli</li>
+            <li>Sierpinski-Mandelbrot pizza</li>
+            <li>Menger sponge cake</li>
+        </ul>
         <p>The pictures from the evening came out lousy, so I won't share them here. If you want illustrations, I dunno,
             send me an email or something.</p>
         <p><b>Romanesco broccoli</b> is easy to make. Use your favorite broccoli/cauliflower recipe, I didn't come up
@@ -26,15 +28,16 @@ export function FractalFeast() {
         <p><b>Sierpinski-Mandelbrot pizza</b> is a hexagonal pizza with an almond flour crust, with little triangles on
             top. I used Daiya "cheese" shreds for this, but if you're not vegan you're sure to have better results with
             so-called "real cheese".</p>
-        <dl>
-            <dt>Ingredients I used for the crust:</dt>
-            <dd>3/4 cup almond flour</dd>
-            <dd>1 1/2 cups "cheese" shreds</dd>
-            <dd>1 "egg"</dd>
-            <dd>1 tbs seasoning</dd>
-            <dd>1/2 tsp salt</dd>
-        </dl>
-        and the recipe!
+        <label>Ingredients I used for the crust:</label>
+        <ul>
+            <li>3/4 cup almond flour</li>
+            <li>1 1/2 cups "cheese" shreds</li>
+            <li>1 "egg"</li>
+            <li>1 tbs seasoning</li>
+            <li>1/2 tsp salt</li>
+        </ul>
+        <br/>
+        <label>and the recipe:</label>
         <ol>
             <li>Melt cheese</li>
             <li>Mix in all other ingredients</li>
@@ -45,22 +48,23 @@ export function FractalFeast() {
             <li>Wham, bam, done!!</li>
         </ol>
 
-        <p>Finally, the <b>Menger sponge cake</b>. This is your warning: this <strong>fell apart</strong> when I made
+        <p>Finally, the <b>Menger sponge cake</b>. This is your warning: this fell apart when I made
             it.
             I suggest you instead use your preferred sponge cake recipe and hope for the best. For the masochists
-            among us, read on.</p>
-        <dl>
-            <dt>You'll need:</dt>
-            <dd>3/4 cup unsweetened apple sauce</dd>
-            <dd>1/4 cup neutral vegetable oil</dd>
-            <dd>3/4 cup white sugar</dd>
-            <dd>1 tbs apple cider vinegar</dd>
-            <dd>1 1/2 cups flour</dd>
-            <dd>1/2 tsp baking soda</dd>
-            <dd>1 tsp baking powder</dd>
-            <dd>a pinch of salt</dd>
-            <dd>vanilla extract</dd>
-        </dl>
+            among us, read on.
+        </p>
+        <label>You'll need:</label>
+        <ul>
+            <li>3/4 cup unsweetened apple sauce</li>
+            <li>1/4 cup neutral vegetable oil</li>
+            <li>3/4 cup white sugar</li>
+            <li>1 tbs apple cider vinegar</li>
+            <li>1 1/2 cups flour</li>
+            <li>1/2 tsp baking soda</li>
+            <li>1 tsp baking powder</li>
+            <li>a pinch of salt</li>
+            <li>vanilla extract</li>
+        </ul>
 
         The recipe:
         <ol>
