@@ -1,13 +1,6 @@
 name: test
 
-on:
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: 'Tag name'
-        required: true
-        default: 'v0.0.1'
-        type: string
+on:  release
 
 jobs:
   get-release:
