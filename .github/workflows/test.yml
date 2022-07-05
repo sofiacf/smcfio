@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Get release
         id: get_release
-        uses: bruceadams/get-release@v1.2.2
+        uses: pozetroninc/github-action-get-latest-release@v0.5.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
