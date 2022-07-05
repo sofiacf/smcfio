@@ -16,6 +16,8 @@ jobs:
       - name: Get release
         id: get_release
         uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Dump GitHub context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
