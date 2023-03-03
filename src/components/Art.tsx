@@ -8,7 +8,7 @@ export const Art: React.FC<any> = () => {
     const [size, setSize] = useState<{ width: number, height: number }>()
 
     useEffect(() => {
-        const interval = setInterval(() => setSeconds(previousValue => previousValue + 1), 200)
+        const interval = setInterval(() => setSeconds(previousValue => previousValue + 1), 400)
         return () => clearInterval(interval)
     }, [])
     useEffect(() => {

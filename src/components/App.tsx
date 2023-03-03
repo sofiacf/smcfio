@@ -1,9 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import '../styles/App.css';
 import {Home} from './Home';
 import {Resume} from './Resume';
 import {Art} from "./Art";
+import {Link, Route, BrowserRouter as Router, Switch} from "react-router-dom";
 
 export const App: React.FC = () => <div className="app">
     <Router>
@@ -18,9 +18,15 @@ export const App: React.FC = () => <div className="app">
                 </tbody>
             </table>
         </nav>
+        <Switch>
+            <Route path={"/cv"}>
+                {Resume}
+            </Route>
+            <Route path={"/"}>
+                {Home}
+            </Route>
+        </Switch>
         <main>
-            <Route path="/cv" component={Resume}/>
-            <Route  path="/" component={Home}/>
             <Art/>
         </main>
     </Router>
