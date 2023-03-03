@@ -1,2 +1,3 @@
 # smcfio
-My personal site, smcf.io
+My personal site that rarely gets updated,
+overbuilt for employment purposes several years ago.
