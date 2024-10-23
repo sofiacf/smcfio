@@ -1,0 +1,29 @@
+.resume td {
+  padding-top: .5rem;
+}
+
+.resume table {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume h3, .resume h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume h3 {
+  font-variant: small-caps;
+}
+
+.resume hr {
+  margin: 0 0 10px 0;
+}
+
+.resume b {
+  font-weight: normal;
+}
+
+.resume a {
+  color: inherit;
+}

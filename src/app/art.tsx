@@ -1,9 +1,10 @@
+'use client'
+import styles from './art.module.css'
 import React, {useEffect, useState} from 'react'
-import '../styles/Art.css'
 
 const CELL_SIZE = 15
 
-export const Art: React.FC<any> = () => {
+export default function Art() {
     const [seconds, setSeconds] = useState(0)
     const [size, setSize] = useState<{ width: number, height: number }>()
 
@@ -85,7 +86,7 @@ export const Art: React.FC<any> = () => {
             return newColors
         })
     }, [cols, rows, seconds])
-    return <div className="blob">{cells}</div>
+    return <div className={styles.blob}>{cells}</div>
 }
 
 const getRandomColor = () => [Math.random() * 255, Math.random() * 255, Math.random() * 255]

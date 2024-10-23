@@ -1,10 +1,12 @@
 .home div {
     max-width: 550px;
-    background-color: rgba(255,255,255,.75);
+    background-color: rgba(255, 255, 255, .75);
 }
+
 .home {
     margin-top: 35px;
 }
-.home .email {
+
+.home a {
     color: blue;
 }

@@ -1,3 +1,37 @@
+body {
+    font: 1rem "Computer Modern Serif";
+    font-weight: lighter;
+}
+
+body > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.art {
+    position: absolute;
+    z-index: -99;
+}
+
+h3, h4, b {
+    font-weight: normal;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    height: 100%;
+}
+
+table {
+    margin: 25px 0 0 0;
+    width: 100%;
+}
+
 h1 {
     font-size: 34px;
     margin-bottom: 8px;
@@ -14,11 +48,6 @@ ol {
 
 p {
     font-size: 1rem;
-}
-
-table {
-    margin: 25px 0 0 0;
-    width: 100%;
 }
 
 ul {
