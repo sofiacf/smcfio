@@ -9,15 +9,16 @@ export default function Home() {
             <div>
                 <p>Welcome to smcf.io, homepage of Sofia Chandler-Freed.</p>
                 <p>
-                    I&apos;m a student studying cognitive/linguistic/computer science and mathematics with experience as
-                    a soprano, bike messenger, and software developer.
+                    I am interested in brains and music (mostly on their own, but sometimes together), among other
+                    things.
+                    I help out with research at MIT, sing, and teach piano in Boston and Metro West!
                 </p>
                 <p>
-                    My time is unusually free these days, so please contact me (sofia@smcf.io) if I can participate in some
-                    project or activity.
+                    To contact me, send a message to any string you like (e.g., sofia) at smcf.io.
+                    I can also be reached at <a href={"mailto:pbrgirl@mit.edu"}>my MIT email</a>.
                 </p>
                 <p>
-                    This domain is mostly for email, but sometimes there is content!
+                    My daily recordings of Bartók&apos;s <i>Mikrokosmos</i> are on my YouTube channel, <a href={"https://www.youtube.com/@mifasof"}>@mifasof</a>.
                 </p>
             </div>
         </div>

@@ -87,6 +87,15 @@ export default function Page() {
             <SectionHeader> Employment</SectionHeader>
             <>
                 <Experience
+                    institution="Massachusetts Institute of Technology"
+                    title="Software Developer"
+                    department={"Laboratory of Dr. Stefanie Shattuck-Hufnagle"}
+                    location="Cambridge, MA"
+                    start="2024"
+                    end={"Present"}
+                    highlights={[]}
+                />
+                <Experience
                     institution="Wellesley College"
                     title="JavaScript Programmer for MIT App Inventor Extensions"
                     department={"TinkerBlocks Group, Computer Science Department"}
@@ -130,8 +139,8 @@ export default function Page() {
             </>
             <SectionHeader> Awards</SectionHeader>
             <>
-                <Award title={"Cape Cod Community College Dean's List"} date={"2022"}/>
-                <Award title={"Phi Theta Kappa Honor Society"} date={"2021"}/>
+                <Award title={"Cape Cod Community College Dean's List"} date="2022"/>
+                <Award title={"Phi Theta Kappa Honor Society"} date="2021"/>
                 <Award title="US Air Force Exemplary Civilian Service Award" date="2021"/>
                 <Award title="North American Cycle Courier Championship Queen of Track" date="2016, 2018"/>
                 <Award title="Grammy Awards for Best Classical Album, Best Choral Performance on a Classical Album"
